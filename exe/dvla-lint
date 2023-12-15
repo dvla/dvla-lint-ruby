@@ -1,0 +1,66 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'tty-config'
+require 'tty-prompt'
+
+def prompt
+  @prompt ||= TTY::Prompt.new
+end
+
+def config
+  unless @config
+    @config ||= TTY::Config.new do |c|
+      c.filename = '.rubocop'
+      c.set(:inherit_gem, :'dvla-lint', value: '.rubocop.yml')
+    end
+  end
+  @config
+end
+
+def create_file
+  prompt_text = 'Which type of project are you building?'
+  choices = [
+    'Plain old Ruby files',
+    'Functional tests with Cucumber',
+    'Ruby on Rails project',
+  ]
+  choice = prompt.select(prompt_text, choices)
+  config.set(:Rails, :Enabled, value: true) if choice == choices[2] # Rails
+  config.write(force: true)
+  puts 'Done'
+end
+
+def config_file_exists
+  prompt_text = 'WARNING: you already have a rubocop configuration, ' \
+                "do you want to overwrite it with the DVLA rubocop configuration?\n" \
+                "(#{file_name})"
+  create_file if prompt.yes?(prompt_text)
+end
+
+def config_file_new
+  prompt_text = "Do you want to install the default DVLA rubocop configuration?\n" \
+                "(#{file_name})"
+  create_file if prompt.yes?(prompt_text)
+end
+
+def file_name
+  File.join(Dir.pwd, '.rubocop.yml')
+end
+
+def create_config
+  if File.exist?(file_name)
+    config_file_exists
+  else
+    config_file_new
+  end
+end
+
+if ARGV[0]&.strip.eql? 'init'
+  create_config
+else
+  puts <<~USAGE
+    Usage:
+      dvla-lint init           # create or overwrite a default Rubocop configuration
+  USAGE
+end

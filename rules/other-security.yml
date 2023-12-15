@@ -1,0 +1,3 @@
+Security/CompoundHash: # new in 1.28
+  Description: 'Checks for implementations of the hash method which combine values using custom logic instead of delegating to Array#hash'
+  Enabled: true

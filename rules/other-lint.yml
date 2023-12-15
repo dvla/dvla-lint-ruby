@@ -1,0 +1,161 @@
+Lint/AmbiguousOperator:
+  Description: >-
+     Checks for ambiguous operators in the first argument of a
+     method invocation without parentheses.
+  Enabled: true
+
+Lint/AmbiguousRegexpLiteral:
+  Description: >-
+    Checks for ambiguous regexp literals in the first argument of
+    a method invocation without parenthesis.
+  Enabled: true
+
+Lint/AssignmentInCondition:
+  Description: "Don't use assignment in conditions."
+  Enabled: true
+
+Layout/ConditionPosition:
+  Description: 'Checks for condition placed in a confusing position relative to the keyword.'
+  Enabled: true
+
+Lint/ConstantOverwrittenInRescue:
+  Description: "Checks for overwriting an exception with an exception result by use `rescue =>`."
+  Enabled: false
+
+Lint/Debugger:
+  Description: 'Check for debugger calls.'
+  Enabled: true
+
+Lint/DeprecatedClassMethods:
+  Description: 'Check for deprecated class method calls.'
+  Enabled: true
+
+Lint/EmptyEnsure:
+  Description: 'Checks for empty ensure block.'
+  Enabled: true
+
+Lint/EmptyInterpolation:
+  Description: 'Checks for empty string interpolation.'
+  Enabled: true
+
+Style/EndBlock:
+  Description: 'END blocks should not be placed inside method definitions.'
+  Enabled: true
+
+Lint/EnsureReturn:
+  Description: 'Never use return in an ensure block.'
+  Enabled: true
+
+Security/Eval:
+  Description: 'The use of eval represents a serious security risk.'
+  Enabled: true
+
+Lint/SuppressedException:
+  Description: "Don't suppress exception."
+  Enabled: true
+
+Lint/LiteralAsCondition:
+  Description: 'Checks of literals used in conditions.'
+  Enabled: true
+
+Lint/LiteralInInterpolation:
+  Description: 'Checks for literals used in interpolation.'
+  Enabled: true
+
+Lint/Loop:
+  Description: >-
+     Use Kernel#loop with break rather than begin/end/until or
+     begin/end/while for post-loop tests.
+  Enabled: true
+
+Lint/NonAtomicFileOperation:
+  Description: Checks for non-atomic file operation and then replace it with a nearly equivalent and atomic method
+  Enabled: false
+
+Lint/ParenthesesAsGroupedExpression:
+  Description: >-
+     Checks for method calls with a space before the opening
+     parenthesis.
+  Enabled: true
+
+Lint/PercentStringArray:
+  Description: Checks for unwanted commas and quotes in %w/%W literals eg %w('foo', “bar”).
+  Enabled: true
+
+Lint/RequireParentheses:
+  Description: >-
+     Use parentheses in the method call to avoid confusion
+     about precedence.
+  Enabled: true
+
+Lint/RequireRangeParentheses:
+  Description: Checks that a range literal is enclosed in parentheses when the end of the range is at a line break.
+  Enabled: false
+
+Lint/ShadowingOuterLocalVariable:
+  Description: >-
+     Do not use the same name as outer local variable
+     for block arguments or block local variables.
+  Enabled: true
+
+Layout/SpaceBeforeFirstArg:
+  Description: >-
+     Put a space between a method name and the first argument
+     in a method call without parentheses.
+  Enabled: true
+
+Lint/UnderscorePrefixedVariableName:
+  Description: 'Do not use prefix `_` for a variable that is used.'
+  Enabled: true
+
+Lint/UnusedMethodArgument:
+  Description: 'Checks for unused method arguments.'
+  Enabled: true
+
+Lint/UnreachableCode:
+  Description: 'Unreachable code.'
+  Enabled: true
+
+Lint/UselessAccessModifier:
+  Description: 'Checks for useless access modifiers.'
+  Enabled: true
+
+Lint/UselessAssignment:
+  Description: 'Checks for useless assignment to a local variable.'
+  Enabled: true
+
+Lint/BinaryOperatorWithIdenticalOperands:
+  Description: 'Checks for comparison of something with itself.'
+  Enabled: true
+
+Lint/UselessSetterCall:
+  Description: 'Checks for useless setter call to a local variable.'
+  Enabled: true
+
+Lint/Void:
+  Description: 'Possible use of operator/literal/variable in void context.'
+  Enabled: true
+
+Lint/RefinementImportMethods: # new in 1.27
+  Description: 'Checks if include or prepend is called in refine block'
+  Enabled: true
+
+Lint/DuplicateMagicComment: # new in 1.37
+  Description: Checks for duplicated magic comments
+  Enabled: true
+
+Lint/UselessRescue: # new in 1.43
+  Description: Checks for useless `rescue`s, which only reraise rescued exceptions
+  Enabled: true
+
+Lint/MixedCaseRange: # new in 1.53.0
+  Description: Checks for mixed-case character ranges since they include likely unintended characters.
+  Enabled: true
+
+Lint/RedundantRegexpQuantifiers: # new in 1.53.0
+  Description: Checks for redundant quantifiers inside Regexp literals.
+  Enabled: true
+
+Lint/DuplicateMatchPattern: # new in 1.50.0
+  Description: Checks that there are no repeated patterns used in in keywords.
+  Enabled: true

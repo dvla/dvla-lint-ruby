@@ -1,0 +1,7 @@
+Gemspec/RequiredRubyVersion:
+  Description: "Checks that required_ruby_version in a gemspec file is set to a valid value (non-blank) and matches TargetRubyVersion as set in RuboCop's configuration for the gem"
+  Enabled: false
+
+Gemspec/DevelopmentDependencies:
+  Description: Enforce that development dependencies for a gem are specified in Gemfile
+  Enabled: false

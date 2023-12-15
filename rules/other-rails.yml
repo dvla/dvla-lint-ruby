@@ -1,0 +1,42 @@
+##################### Rails ##################################
+
+# By default Rails is switched off so this can be used by non-Rails apps,
+# this can be enabled in a local .rubocop.yml file
+Rails:
+  Enabled: false
+
+Rails/ActionFilter:
+  Description: 'Enforces consistent use of action filter methods.'
+  Enabled: false
+
+Rails/Delegate:
+  Description: 'Prefer delegate method for delegations.'
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Description: 'Prefer has_many :through to has_and_belongs_to_many.'
+  Enabled: false
+
+Rails/Output:
+  Description: 'Checks for calls to puts, print, etc.'
+  Enabled: false
+
+Rails/ReadWriteAttribute:
+  Description: 'Checks for read_attribute(:attr) and write_attribute(:attr, val).'
+  Enabled: false
+
+Rails/ScopeArgs:
+  Description: 'Checks the arguments of ActiveRecord scopes.'
+  Enabled: false
+
+Rails/Validation:
+  Description: 'Use sexy validations.'
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Description: 'Avoid methods that skip model validations.'
+  Enabled: false
+
+Rails/ActiveRecordAliases:
+  Description: 'The direct method names are more clear and easier to read.'
+  Enabled: false

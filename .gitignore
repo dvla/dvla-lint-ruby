@@ -1,0 +1,19 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+/.idea/
+*.iml
+
+# rspec failure tracking
+.rspec_status
+
+.DS_Store
+
+dvla-lint*gem
+
+Gemfile.lock

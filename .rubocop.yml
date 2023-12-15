@@ -1,0 +1,26 @@
+AllCops:
+  DisplayCopNames:
+    Description: 'Display cop names in offense messages'
+    Enabled: true
+
+  ExtraDetails:
+    Description: 'Display extra details in offense messages.'
+    Enabled: true
+
+  DisplayStyleGuide:
+    Description: 'Display style guide URLs in offense messages.'
+    Enabled: true
+
+require: 
+  - rubocop-rails
+  - rubocop-performance
+
+inherit_from:
+  - rules/dvla-ruby-styleguide.yml
+  - rules/other-lint.yml
+  - rules/other-rails.yml
+  - rules/other-style.yml
+  - rules/other-metrics.yml
+  - rules/other-excludes.yml
+  - rules/other-gemspec.yml
+  - rules/other-security.yml

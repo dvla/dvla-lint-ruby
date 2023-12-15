@@ -1,0 +1,19 @@
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - db/**/*
+    - bin/**/*
+    - node_modules/**/*
+    - vendor/**/*
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - "config/routes.rb"
+    - "test/**/*"
+    - "**/spec/**/*"
+
+  AllowedMethods: ["namespace"]
+
+Bundler/DuplicatedGem:
+  Enabled: false
