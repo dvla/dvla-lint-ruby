@@ -11,7 +11,7 @@ AllCops:
     Description: 'Display style guide URLs in offense messages.'
     Enabled: true
 
-require: 
+plugins: 
   - rubocop-rails
   - rubocop-performance
 
