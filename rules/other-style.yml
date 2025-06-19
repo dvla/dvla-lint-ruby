@@ -265,7 +265,7 @@ Style/PerlBackrefs:
   Description: 'Avoid Perl-style regex back references.'
   Enabled: false
 
-Naming/PredicateName:
+Naming/PredicatePrefix:
   Description: 'Check the names of predicate methods.'
   Enabled: false
 
