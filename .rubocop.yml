@@ -1,4 +1,6 @@
 AllCops:
+  NewCops: enable
+
   DisplayCopNames:
     Description: 'Display cop names in offense messages'
     Enabled: true
@@ -9,7 +11,7 @@ AllCops:
 
   DisplayStyleGuide:
     Description: 'Display style guide URLs in offense messages.'
-    Enabled: true
+    Enabled: true  
 
 plugins: 
   - rubocop-rails

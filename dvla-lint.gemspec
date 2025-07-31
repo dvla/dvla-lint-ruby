@@ -33,9 +33,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.13'
 
-  spec.add_runtime_dependency 'rubocop', '~> 1.72'
-  spec.add_runtime_dependency 'rubocop-performance', '~> 1.5'
-  spec.add_runtime_dependency 'rubocop-rails', '~> 2.17'
-  spec.add_runtime_dependency 'tty-config', '~> 0.5'
-  spec.add_runtime_dependency 'tty-prompt', '~> 0.23'
+  spec.add_dependency 'rubocop', '~> 1.72'
+  spec.add_dependency 'rubocop-performance', '~> 1.5'
+  spec.add_dependency 'rubocop-rails', '~> 2.17'
+  spec.add_dependency 'tty-config', '~> 0.5'
+  spec.add_dependency 'tty-prompt', '~> 0.23'
 end
