@@ -132,10 +132,6 @@ Layout/EmptyLinesAroundAccessModifier:
   Description: "Keep blank lines around access modifiers."
   Enabled: true
 
-Layout/EmptyLines:
-  Description: "Keeps track of empty lines around expression bodies."
-  Enabled: false
-
 Style/EmptyLiteral:
   Description: 'Prefer literals to Array.new/Hash.new/String.new.'
   Enabled: false
